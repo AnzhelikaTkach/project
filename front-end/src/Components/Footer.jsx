@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/Footer.scss";
+import "../styles/FilterProducts.scss";
 import Iframe from "react-iframe";
 
 function Footer() {
