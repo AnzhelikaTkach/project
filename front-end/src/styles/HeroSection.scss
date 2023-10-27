@@ -1,0 +1,82 @@
+@import "../App.scss";
+.clr {
+  color: $clr-white;
+  font-weight: 700;
+  line-height: 130%;
+
+  // font-size: 50px;
+}
+.hero-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: $clr-blue;
+  margin-top: 76px;
+  @include medium-screen {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  &__title {
+    color: $clr-white;
+    & h1 {
+      font-size: 80px;
+      margin: 200px 0 80px 60px;
+    }
+    & h2 {
+      font-size: 63px;
+      margin: 0 0 100px 60px;
+    }
+  }
+  .bg {
+    background-color: $clr-blue;
+  }
+  .hero-btn {
+    padding: 25px 50px;
+    margin-left: 60px;
+    font-weight: 700;
+    line-height: 130%;
+    border: none;
+    border-radius: 13px;
+    font-size: 25px;
+    background-color: $clr-white;
+  }
+
+  &__img {
+    z-index: 1;
+  }
+}
+
+@media (max-width: 799px) and (min-width: 770px) {
+  .hero-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    justify-items: center;
+    gap: 0;
+      
+  }
+  .hero-container__title {
+    & h1 {
+      display: grid;
+      justify-content: center;
+
+    }
+    & h2 {
+      display: grid;
+      justify-content: center;
+    }
+  }
+
+  .hero-btn {
+
+    overflow-y:initial
+  
+  }
+  .bg{
+    display: grid;
+    justify-content: center;
+    // margin-top: -10px;
+    
+    // background-color: transparent;
+  }
+}
