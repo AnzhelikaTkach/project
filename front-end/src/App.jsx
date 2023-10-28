@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import "./index.scss"
 import "./App.scss";
 import { useDispatch } from "react-redux";
 

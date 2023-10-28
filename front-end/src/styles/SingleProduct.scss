@@ -1,0 +1,97 @@
+@import "../App.scss";
+@import "../index.scss";
+
+.product-container {
+  display: grid;
+  grid-template-columns: 1fr auto;
+
+  .product_title-img {
+  }
+  .product__title {
+    margin-top: 50px;
+    margin-left: 30px;
+    color: #3a3a3a;
+
+    font-size: 36px;
+
+    font-weight: 600;
+    line-height: 130%; /* 46.8px */
+    letter-spacing: 1.08px;
+  }
+  .product__image {
+    width: 700px;
+    height: 700px;
+    margin: 34px 128px 100px 60px;
+  }
+
+  .product__price_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 180px;
+    gap: 10px;
+    margin-right: 40px;
+    margin-bottom: 40px;
+  }
+  .product__price {
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 130%; /* 91px */
+    letter-spacing: 2.1px;
+  }
+  .product__disc_price {
+    font-size: 20px;
+    font-weight: 500;
+    color: #8b8b8b;
+    text-decoration-line: line-through;
+  }
+  .product__disc_percent {
+    font-size: 28px;
+    font-weight: 600;
+    color: #ff32a1;
+  }
+  .product__btn {
+    margin-bottom: 40px;
+    padding: 25px 120px;
+    background-color: #393;
+    border-radius: 10px;
+    border: 2px solid #393;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    &:hover{
+        color: $clr-primary;
+    border: 2px solid #393;
+    background: #f1fff1;
+    }
+ 
+  }
+
+.product__btn:active{
+    content: 'bh';
+    color: $clr-white;
+      background: linear-gradient(263deg, #393 -0.43%, #006300 104.36%);
+}
+  .line{
+    height: 1px;
+    background-image: linear-gradient(90deg, #C0C0C0, #C0C0C0 75%, transparent 75%, transparent 100%);
+    background-size: 20px 1px;
+    border: none;
+    margin-right: 40px;
+    margin-bottom: 25px;
+  }
+  .product__description_t{
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 130%; /* 26px */
+    letter-spacing: 0.6px;
+    margin-bottom: 5px;
+  }
+  .product__description{
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 130%; /* 26px */
+    letter-spacing: 0.6px;
+  }
+}

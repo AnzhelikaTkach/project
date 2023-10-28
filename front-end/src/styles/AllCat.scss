@@ -1,18 +1,17 @@
 @import "../App.scss";
-.category{
-&__title{
+.category {
+  &__title {
     margin-top: 50px;
     margin-bottom: 40px;
     margin-left: 31px;
     font-size: 40px;
-font-style: normal;
-font-weight: 700;
-line-height: 130%; /* 52px */
-letter-spacing: 1.2px;
-}
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%; /* 52px */
+    letter-spacing: 1.2px;
+  }
 
-.category-container {
-
+  .category-container {
     display: grid;
     justify-content: center;
     margin: 0 33px 30px 33px;
@@ -21,20 +20,17 @@ letter-spacing: 1.2px;
     gap: 35px;
     justify-content: space-between;
     .categories {
-     display: flex;
-     flex-wrap: wrap;
-    justify-content: center;
-    @media (max-width: 1404px) and (min-width: 1104px){
-        .category-container{
-            grid-template-columns: repeat(1fr,3 );
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      @media (max-width: 1404px) and (min-width: 1104px) {
+        .category-container {
+          grid-template-columns: repeat(1fr, 3);
         }
-        
-       
-    }
-    @media (max-width: 799px) and (min-width: 770px){
+      }
+      @media (max-width: 799px) and (min-width: 770px) {
+      }
 
-    }
-     
       .categories__img {
         width: 318px;
         height: 350px;
@@ -52,5 +48,3 @@ letter-spacing: 1.2px;
     }
   }
 }
-
-

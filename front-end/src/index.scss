@@ -1,0 +1,39 @@
+$clr-primary: #393;
+$clr-secondary: rgb(36, 108, 36);
+$clr-white: #fff;
+$clr-black: #000;
+$clr-blue: #a1e2eb;
+$clr-pink: #ff32a1;
+$clr-desc: #3a3a3a;
+$clr-telephone: #6c6c6c;
+$clr-gradient: linear-gradient(263deg, #393 -0.43%, #006300 104.36%);
+$transition-default: all 300ms ease-in-out;
+$font-family-montserrat: "Montserrat", sans-serif;
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 16px;
+  line-height: 20.8px;
+  font-family: $font-family-montserrat;
+  color: $clr-black;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+  &:hover {
+    opacity: 0.6;
+  }
+}

@@ -18,6 +18,7 @@ function SingleProduct({ product }) {
   }
   return (
     <div className="product">
+
       <img
         onClick={() => navigate(`/products/${product.id}`)}
         src={`http://localhost:3333/${product.image}`}
@@ -25,6 +26,7 @@ function SingleProduct({ product }) {
         className="product__img"
       />
       <button
+      
         className="product__addToCart"
         onClick={() => handleCartAdd(product)}
       >
@@ -41,13 +43,14 @@ function SingleProduct({ product }) {
             <span className="product__disc_percent">{discountPercent}%</span>
           </div>
         ) : (
-          <div>
+          
             <p className="product__price">{product.price}$</p>
-          </div>
+         
         )}
       </div>
-      <Link className="product__title" to={`/products/${product.id}`}>
-        {product.title}
+      <Link  to={`/products/${product.id}`}>
+        <p className="product__title">{product.title}</p>
+        
       </Link>
     </div>
   );

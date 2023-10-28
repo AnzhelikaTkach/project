@@ -17,12 +17,19 @@
 .products__container {
   display: grid;
   justify-content: center;
-  margin: 0 33px 0px 33px;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: auto 1fr;
-  max-width: 1440px;
+  margin: 0 ;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  // grid-template-columns: repeat(4, 1fr);
+  // grid-template-rows: auto 1fr;
+  // max-width: 1440px;
   gap: 15px;
-  justify-content: space-between;
+  justify-items: center;
+  // justify-content: space-between;
+  // align-items: center;
+}
+.product_items {
+  margin: 0 ;
+  align-items: center;
 }
 
 .product-list {
@@ -30,8 +37,7 @@
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
-  .product_items {
-  }
+
   .product-item {
     background-color: $clr-white;
     overflow: hidden;

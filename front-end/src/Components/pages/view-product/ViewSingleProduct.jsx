@@ -4,8 +4,11 @@ import { useParams, useNavigate, Navigate } from "react-router-dom";
 import SingleProduct from "../../SingleProduct";
 import { getSingleProduct } from "../../../store/slices/productsSlice";
 import { addToCart } from "../../../store/slices/cartSlice";
+import "../../../styles/SingleProduct.scss";
+import { useState } from "react";
 
 function ViewSingleProduct() {
+  const [toCart, setToCart] =useState(false);
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const products = useSelector((state) => state.products.productSingle);
@@ -28,6 +31,7 @@ function ViewSingleProduct() {
   // );
   function handleCartAdd() {
     dispatch(addToCart(products));
+    setToCart(!toCart)
   }
 
   useEffect(() => {
@@ -48,35 +52,51 @@ function ViewSingleProduct() {
   }
 
   return (
-    <div>
+    <div className="product-container">
       {products.map((product) => (
         <>
-          <h1>{product.title}</h1>
-          <img
-            src={`http://localhost:3333/${product.image}`}
-            alt={product?.title}
-            className="product__img"
-          />
-          <div>
-            {product.discont_price ? (
-              <>
-                <p>{product.discont_price}$</p>
-                <p>{product.price}$</p>
-                <p>
-                  {Math.floor(
-                    ((product.price - product.discont_price) / product.price) *
-                      100
-                  )}
-                  %
-                </p>
-              </>
-            ) : (
-              <p>{product.price}</p>
-            )}
+          <div className="product_title-img">
+            <h1 className="product__title">{product.title}</h1>
+            <img
+              src={`http://localhost:3333/${product.image}`}
+              alt={product?.title}
+              className="product__image"
+            />
           </div>
 
-          <p>{product.description}</p>
-          <button onClick={() => handleCartAdd(product)}>Add to cart</button>
+          <div>
+            <div className="product__price_container">
+              {product.discont_price ? (
+                <>
+                  <span className="product__price">{product.price}$</span>
+                  <span className="product__disc_price">
+                    {product.discont_price}$
+                  </span>
+
+                  <span className="product__disc_percent">
+                    {Math.floor(
+                      ((product.price - product.discont_price) /
+                        product.price) *
+                        100
+                    )}
+                    %
+                  </span>
+                </>
+              ) : (
+                <span className="product__price">{product.price}$</span>
+               
+              )}
+            </div>
+            
+            <button onClick={() => dispatch(addToCart(product))} className="product__btn" >
+  
+              To cart
+              
+             </button>
+            <hr className="line"></hr>
+            <h4 className="product__description_t">Description</h4>
+            <p className="product__description">{product.description}</p>
+          </div>
         </>
       ))}
     </div>

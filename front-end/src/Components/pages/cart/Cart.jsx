@@ -9,6 +9,7 @@ import { useDispatch } from "react-redux";
 function Cart({ id, image, title, price, quantity = 0 }) {
   const dispatch = useDispatch();
 
+
   return (
     <div className="cart">
       <img

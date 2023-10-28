@@ -32,7 +32,6 @@ function Navbar() {
           }
         >
           Catalog
-          {/* <button className="header-btn btn-primary">Catalog</button> */}
         </NavLink>
       </div>
 
