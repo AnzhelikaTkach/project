@@ -7,6 +7,7 @@ import "../styles/ModalWindow.scss";
 import { clearCart } from "../store/slices/cartSlice";
 import { useDispatch } from "react-redux";
 
+
 function Form({ url, firstSubtitle, secondSubtitle, btnTitle }) {
   const [openModal, setOpenModal] = useState(false);
   const dispatch = useDispatch();
@@ -55,7 +56,7 @@ function Form({ url, firstSubtitle, secondSubtitle, btnTitle }) {
               required: "This input is required",
               minLength: {
                 value: 11,
-                message: "Too short! you Need 11 symbols",
+                message: "Too short! You Need 11 symbols",
               },
               maxLength: {
                 value: 11,

@@ -5,7 +5,7 @@ import '../styles/HeroSection.scss'
 function HeroSection() {
   const navigate = useNavigate();
   return (
-   <div className='hero-container container'>
+   <div className='hero-container '>
      <div className='hero-container__title'>
         <h1 className=''>Sale</h1>
         <h2 className=''>New season</h2>

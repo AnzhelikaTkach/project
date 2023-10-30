@@ -21,6 +21,7 @@ import { getAllCategories } from "./store/slices/categoriesSlice";
 import { getProducts } from "./store/slices/productsSlice";
 import ProductsWithSalePage from "./Components/pages/view-product/ProductsWithSalePage";
 
+
 function App() {
   const dispatch = useDispatch();
 

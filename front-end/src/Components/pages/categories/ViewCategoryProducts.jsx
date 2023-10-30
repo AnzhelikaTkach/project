@@ -26,7 +26,7 @@ function ViewCategoryProducts() {
     (state) => state.categories.categoryProductsStatus
   );
 
-  const [filteredProducts, setFilteredProducts] = useState(categoryProducts);
+  // const [filteredProducts, setFilteredProducts] = useState(categoryProducts);
 
   console.log("cat", catTitle);
   console.log("selectedCategory", categoryProducts);

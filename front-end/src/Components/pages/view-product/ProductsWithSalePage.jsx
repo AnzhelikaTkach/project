@@ -12,7 +12,7 @@ function ProductsWithSalePage() {
   const products = useSelector((state) => state.products.products);
   const status = useSelector((state) => state.products.status);
   let saleProducts = products.filter((product) => product.discont_price);
-  const [filteredProducts, setFilteredProducts] = useState(saleProducts);
+  // const [filteredProducts, setFilteredProducts] = useState(saleProducts);
 
   // const [priceFrom, setPriceFrom] = useState("");
   // const [priceTo, setPriceTo] = useState("");
@@ -31,10 +31,10 @@ function ProductsWithSalePage() {
         <h1 className="category__title">Products with sale</h1>
 
         {/* First option */}
-        {/* <Filter products={saleProducts} isDiscountPage={true} status={status} /> */}
+        <Filter products={saleProducts} isDiscountPage={true} status={status} />
 
         {/* Second option */}
-        <FilterProducts
+        {/* <FilterProducts
           products={saleProducts}
           isDiscountPage={true}
           setFilteredProducts={setFilteredProducts}
@@ -48,14 +48,14 @@ function ProductsWithSalePage() {
           // priceTo={priceTo}
           // showDiscount={showDiscount}
           // sortType={sortType}
-        />
-        <div className="products__container">
+        /> */}
+        {/* <div className="products__container">
           {filteredProducts.map((product) => (
             <div className="product_items" key={product.id}>
               <SingleProduct product={product} />
             </div>
           ))}
-        </div>
+        </div> */}
       </div>
     );
   }

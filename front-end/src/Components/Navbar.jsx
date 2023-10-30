@@ -1,25 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import "../styles/Navbar.scss";
 // import { Cart } from "../view";
 // import { useState } from "react";
 import { NavLink } from "react-router-dom";
 
 function Navbar() {
-  // const [menuClass, setMenuClass] = useState("menu hidden")
-  //   const [isMenuClicked, setIsMenuClicked] = useState(false);
+  const [menuClass, setMenuClass] = useState("menu hidden")
+    const [isMenuClicked, setIsMenuClicked] = useState(false);
 
-  //   const updateMenu = () => {
-  //     if(!isMenuClicked) {
+    const updateMenu = () => {
+      if(!isMenuClicked) {
 
-  //         setMenuClass("menu visible")
-  //     }
-  //     else {
-  //         setMenuClass("menu hidden")
-  //     }
-  //     setIsMenuClicked(!isMenuClicked)
-  // }
+          setMenuClass("menu visible")
+      }
+      else {
+          setMenuClass("menu hidden")
+      }
+      setIsMenuClicked(!isMenuClicked)
+  }
   return (
-    <header className="header container header-nav">
+    <header className="header header-nav">
       <div className="header__logo-btn">
         <NavLink to="/">
           <img className="logo" src="../images/icon.png" alt="iconImage" />
@@ -66,6 +66,7 @@ function Navbar() {
           </NavLink>
 
           <img
+          onClick={()=> setIsMenuClicked}
             className="burger "
             src="../images/menu_hamburger_burger.png"
             alt="menu icon"

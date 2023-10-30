@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/FilterProducts.scss"
+import "../styles/FilterProducts.scss";
 function FormFilter({
   priceFrom,
   priceTo,
@@ -10,31 +10,31 @@ function FormFilter({
   setShowDiscount,
   setSortType,
   isDiscountPage,
-  discountPage
+  discountPage,
 }) {
   return (
     <div className="filtration">
       <span className="filtration__title-price">Price</span>
       <input
-       className="filtration__from-to"
+        className="filtration__from-to"
         type="number"
         value={priceFrom}
         onChange={(e) => setPriceFrom(e.target.value)}
-        placeholder="From"
+        placeholder="from"
       />
       <input
-       className="filtration__from-to"
+        className="filtration__from-to"
         type="number"
         value={priceTo}
         onChange={(e) => setPriceTo(e.target.value)}
-        placeholder="To"
+        placeholder="to"
       />
       {!discountPage && (
         <>
-          <label  className="filtration__title">
+          <label className="filtration__title-checkbox">
             Discounted Items
             <input
-            className="filtration__checkbox"
+              className="filtration__checkbox"
               type="checkbox"
               checked={showDiscount}
               onChange={(e) => setShowDiscount(e.target.checked)}
@@ -42,13 +42,16 @@ function FormFilter({
           </label>
         </>
       )}
-      <label className="filtration__title">
+      <label className="filtration__title-sort">
         Sorted
-        <select value={sortType} onChange={(e) => setSortType(e.target.value)}>
-          <option value="">Выберите</option>
+        <div className="select">
+        <select className="filtration-select" value={sortType} onChange={(e) => setSortType(e.target.value)}>
+          <option value="">by default</option>
           <option value="asc">По Возрастанию</option>
           <option value="desc">По убыванию</option>
         </select>
+        </div>
+       
       </label>
     </div>
   );

@@ -8,7 +8,7 @@ import FormFilter from "./FormFilter";
 function Filter({ products, isDiscountPage, status }) {
   // const products = useSelector((state) => state.products.products);
   // const products = useSelector((state) => state.products.status);
-  const [discountPage,setDiscountPage] = useState(isDiscountPage)
+  // const [discountPage,setDiscountPage] = useState(isDiscountPage)
   const [filteredProducts, setFilteredProducts] = useState(products);
   // console.log("products", products);
   const [priceFrom, setPriceFrom] = useState("");
@@ -55,7 +55,7 @@ function Filter({ products, isDiscountPage, status }) {
     <>
       <div>
       <FormFilter
-        discountPage={discountPage}
+        discountPage={isDiscountPage}
         setPriceFrom={setPriceFrom}
         setPriceTo={setPriceTo}
         setFilteredProducts={setFilteredProducts}

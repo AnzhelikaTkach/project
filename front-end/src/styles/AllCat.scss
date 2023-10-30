@@ -1,6 +1,32 @@
 @import "../App.scss";
-.category {
+.catalog {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 31px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  gap: 96px;
   &__title {
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%; /* 52px */
+    letter-spacing: 1.2px;
+  }
+  &__button {
+    padding: 7px 6px;
+    color: #8b8b8b;
+    background-color: white;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%; /* 15.6px */
+    letter-spacing: 0.36px;
+    border-color: #8b8b8b;
+  }
+}
+  .category__title {
     margin-top: 50px;
     margin-bottom: 40px;
     margin-left: 31px;
@@ -14,22 +40,33 @@
   .category-container {
     display: grid;
     justify-content: center;
-    margin: 0 33px 30px 33px;
-    grid-template-columns: repeat(4, 1fr);
-    max-width: 1440px;
-    gap: 35px;
-    justify-content: space-between;
+    margin: 0 ;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    // grid-template-columns: repeat(4, 1fr);
+    // grid-template-rows: auto 1fr;
+    // max-width: 1440px;
+    gap: 15px;
+    justify-items: center;
     .categories {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      @media (max-width: 1404px) and (min-width: 1104px) {
-        .category-container {
-          grid-template-columns: repeat(1fr, 3);
-        }
-      }
-      @media (max-width: 799px) and (min-width: 770px) {
-      }
+      // display: flex;
+      // flex-wrap: wrap;
+      // justify-content: center;
+      // @media (max-width: 1404px) and (min-width: 1104px) {
+      //   .category-container {
+      //     grid-template-columns: repeat(1fr, 3);
+      //   }
+      // }
+      // @media (max-width: 799px) and (min-width: 770px) {
+      // }
+      display: grid;
+  justify-content: center;
+  margin: 0 ;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  // grid-template-columns: repeat(4, 1fr);
+  // grid-template-rows: auto 1fr;
+  // max-width: 1440px;
+  gap: 15px;
+  justify-items: center;
 
       .categories__img {
         width: 318px;
@@ -47,4 +84,4 @@
       }
     }
   }
-}
+

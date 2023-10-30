@@ -10,6 +10,7 @@ import { getProducts } from "../../../store/slices/productsSlice";
 
 // import "../../styles/Products.module.css";
 import "../../../styles/ViewAllProducts.scss";
+import Filter from "../../Filter";
 
 function AllProductsPage() {
   const dispatch = useDispatch();
@@ -27,7 +28,7 @@ function AllProductsPage() {
   //     setFilteredProducts(products);
   //   }
   // }, [status]);
-  const [filteredProducts, setFilteredProducts] = useState(products);
+  // const [filteredProducts, setFilteredProducts] = useState(products);
 
   // useEffect(() => {
   //   dispatch(getProducts());
@@ -40,7 +41,13 @@ function AllProductsPage() {
       <div>
         <h1 className="category__title">All Products</h1>
 
-        <FilterProducts
+        <Filter
+          products={products}
+          isDiscountPage={false}
+          status={status}
+        />
+
+        {/* <FilterProducts
           products={products}
           setFilteredProducts={setFilteredProducts}
           status={status}
@@ -51,7 +58,7 @@ function AllProductsPage() {
               <SingleProduct product={product} />
             </div>
           ))}
-        </div>
+        </div> */}
       </div>
     );
   }

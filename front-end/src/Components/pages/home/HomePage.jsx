@@ -3,8 +3,8 @@ import { useSelector } from "react-redux";
 import "../../../App.scss";
 import { Link, useNavigate } from "react-router-dom";
 import Discount from "../../Discount";
-import "../../../styles/Categories.scss";
-import "../../../styles/ViewAllProducts.scss";
+import "../../../styles/AllCat.scss";
+// import "../../../styles/Categories.scss";
 import HeroSection from "../../HeroSection";
 
 // import ViewAllProducts from "../view-product/ViewAllProducts";

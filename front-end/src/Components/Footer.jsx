@@ -39,20 +39,22 @@ function Footer() {
           <p className="day">24 hours a day</p>
         </div>
       </div>
-      <div className="for-map">
+      
         <div className="map">
+          
           <Iframe
             url="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2428.409221635401!2d13.37504469999999!3d52.50793289999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a8515353a68755%3A0xd0866511db4f838f!2sStarta%20Institute%20by%20Tel-Ran!5e0!3m2!1sru!2sde!4v1696080303266!5m2!1sru!2sde"
-            width="1345px"
-            height="525px"
-            id=""
-            className=""
+            width="100%"
+            position="absolute"
+            height='436px'
+            id="myMap"
+            className="mapp"
             display="block"
-            position="relative"
+            
           />
-          {/* <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2428.409221635401!2d13.37504469999999!3d52.50793289999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a8515353a68755%3A0xd0866511db4f838f!2sStarta%20Institute%20by%20Tel-Ran!5e0!3m2!1sru!2sde!4v1696080303266!5m2!1sru!2sde" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> */}
+          {/* <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2428.409221635401!2d13.37504469999999!3d52.50793289999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a8515353a68755%3A0xd0866511db4f838f!2sStarta%20Institute%20by%20Tel-Ran!5e0!3m2!1sru!2sde!4v1696080303266!5m2!1sru!2sde"   width={1000} height={500} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture full" sandbox='allow-scripts allow-modal'  ></iframe> */}
         </div>
-      </div>
+      
     </footer>
   );
 }

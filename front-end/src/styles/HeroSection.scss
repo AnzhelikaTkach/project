@@ -4,7 +4,6 @@
   font-weight: 700;
   line-height: 130%;
 
-  // font-size: 50px;
 }
 .hero-container {
   display: grid;
@@ -12,19 +11,60 @@
   background-color: $clr-blue;
   margin-top: 76px;
   @include medium-screen {
+    display: grid;
     grid-template-columns: 1fr;
-    gap: 30px;
+    margin-top: 70px;
+    justify-items: center;
+    text-align: center;
+  }
+  @include small-screen {
+    // margin-top: 70px;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+  }
+  @include x-small {
+    // margin-top: 70px;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
   }
 
   &__title {
     color: $clr-white;
+    @include small-screen {
+      text-align: center;
+    }
     & h1 {
       font-size: 80px;
       margin: 200px 0 80px 60px;
+      @include medium-screen {
+        margin: 200px 0 0 0;
+      }
+      @include small-screen {
+        margin: 150px 0 0 0;
+      }
+      @include x-small {
+        margin: 80px ;
+      }
     }
     & h2 {
       font-size: 63px;
       margin: 0 0 100px 60px;
+      @include medium-screen {
+        margin: 80px 0 0 0;
+      }
+      @include small-screen {
+        margin: 80px 0 0 0;
+      }
+      @include x-small {
+        margin: 10px;
+        font-size: 55px;
+        gap: 10px;
+        
+      }
     }
   }
   .bg {
@@ -39,44 +79,41 @@
     border-radius: 13px;
     font-size: 25px;
     background-color: $clr-white;
+    @include medium-screen {
+      margin: 80px 0 0 0;
+    }
+    @include small-screen {
+      margin: 60px 0 0 0;
+    }
   }
 
   &__img {
-    z-index: 1;
+    width: 100%;
+
+    @include big-screen {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+    @include medium-screen {
+      // height: 800px;
+      height: 100%;
+      // width: 700px;
+      width: 100%;
+      object-fit: cover;
+    }
+    @include small-screen {
+      // width: 600px;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+    @include x-small {
+      // height: 650px;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
   }
 }
 
-@media (max-width: 799px) and (min-width: 770px) {
-  .hero-container {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 30px;
-    justify-items: center;
-    gap: 0;
-      
-  }
-  .hero-container__title {
-    & h1 {
-      display: grid;
-      justify-content: center;
-
-    }
-    & h2 {
-      display: grid;
-      justify-content: center;
-    }
-  }
-
-  .hero-btn {
-
-    overflow-y:initial
-  
-  }
-  .bg{
-    display: grid;
-    justify-content: center;
-    // margin-top: -10px;
-    
-    // background-color: transparent;
-  }
-}

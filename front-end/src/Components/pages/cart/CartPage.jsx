@@ -4,6 +4,7 @@ import { useSelector } from "react-redux";
 import Cart from "./Cart";
 import Form from "../../Form";
 import { NavLink } from "react-router-dom";
+import EmptyCart from "../../EmptyCart";
 
 function CartPage() {
   const cart = useSelector((state) => state.cart.cart);
@@ -15,31 +16,26 @@ function CartPage() {
   // const quantity = useSelector((state)=> state.cart.cart[0].quantity)
   // console.log("quan",quantity);
 
-
   const getTotal = () => {
     let totalQuantity = 0;
     let totalPrice = 0;
     cart.forEach((item) => {
       totalQuantity += item.quantity;
       Math.floor((totalPrice += item.price * item.quantity));
-
-      
     });
     return { totalPrice, totalQuantity };
   };
 
-  const emptyCartMsg = <h4 className='empty'>Your cart is empty!</h4>;
+  // const emptyCartMsg = <h4 className="empty">Your cart is empty!</h4> ;
 
   useEffect(() => {
-    
     localStorage.setItem("cart", JSON.stringify(cart));
-  
   });
 
   return (
     <div>
       <h3>Shopping Cart</h3>
-      
+
       <NavLink to="/">
         Back to the store
         <svg
@@ -55,9 +51,9 @@ function CartPage() {
           />
         </svg>
       </NavLink>
-      {
-        cart.length === 0 ? emptyCartMsg : (
-           cart.map((item) => (
+      {cart.length === 0
+        ? <EmptyCart/>
+        : cart.map((item) => (
             <Cart
               key={item.id}
               id={item.id}
@@ -66,12 +62,8 @@ function CartPage() {
               price={item.price}
               quantity={item.quantity}
             />
-          ))
+          ))}
 
-        )
-      }
-
-     
       {}
       <div>
         <p className="total__p">
