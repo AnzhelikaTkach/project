@@ -1,14 +1,10 @@
-import React from "react";
 import { useSelector } from "react-redux";
-import "../../../App.scss";
 import { Link, useNavigate } from "react-router-dom";
+
+import "../../../App.scss";
 import Discount from "../../Discount";
 import "../../../styles/AllCat.scss";
-// import "../../../styles/Categories.scss";
 import HeroSection from "../../HeroSection";
-
-// import ViewAllProducts from "../view-product/ViewAllProducts";
-import ProductsWithSalePage from "../view-product/ProductsWithSalePage";
 import SingleProduct from "../../SingleProduct";
 
 function HomePage() {
@@ -36,13 +32,10 @@ function HomePage() {
     return <h1>{error}</h1>;
   }
 
-  // const { categories, products } = useSelector((state) => state);
-  // console.log(categories)
   return (
     <div>
       <HeroSection />
-      {/* <Categories products={categories} amount={4} title="Catalog"/> */}
-      {/* <ViewAllProducts products={products} amount={4} title="Sale"/> */}
+
       <div>
         <div className="catalog">
           <h2 className="catalog__title">Catalog</h2>
@@ -57,7 +50,7 @@ function HomePage() {
         <div className="category-container">
           {categories.categories.slice(0, 4).map((category) => (
             <Link key={category.id} to={`/categories/${category.id}`}>
-              <div  className="categories">
+              <div className="categories">
                 <img
                   className="categories__img"
                   src={`http://localhost:3333/${category.image}`}

@@ -4,25 +4,66 @@
 .footer-information {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  h3 {
-    font-size: 40px;
-    font-weight: 700;
-    line-height: 52px;
-    margin: 50px 0 30px 0;
+  align-items: center;
+  @include big-screen {
   }
-  .telephone {
-    margin-left: 32px;
-    font-size: 60px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 130%;
+  @include medium-screen {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
   }
-  .footer-icon {
-    display: flex;
-    margin: 30px 0 47px 32px;
-    gap: 63px;
+  .contact {
+    @include medium-screen {
+      text-align: center;
+    }
+    h3 {
+      font-size: 40px;
+      font-weight: 700;
+      line-height: 52px;
+      margin: 50px 0 30px 0;
+      @include medium-screen {
+        margin: 0;
+        text-align: center;
+        margin: 50px 20px 40px 20px;
+      }
+    }
+    .telephone {
+      margin-left: 32px;
+      font-size: 55px;
+      font-weight: 600;
+      line-height: 130%;
+      @include big-screen {
+        font-size: 40px;
+      }
+      @include small-screen {
+        font-size: 35px;
+      }
+    }
+    .footer-icon {
+      display: flex;
+      margin: 30px 0 47px 32px;
+      gap: 63px;
+      @include medium-screen {
+        display: flex;
+        justify-content: center;
+      }
+    }
   }
 
+  .address {
+    @include medium-screen {
+      margin-bottom: 40px;
+      text-align: center;
+      margin: 10px 20px 40px 20px;
+    }
+
+    h3 {
+      font-size: 40px;
+      font-weight: 700;
+      line-height: 52px;
+      margin-bottom: 30px;
+    }
+  }
   a {
     margin-top: 25px;
     font-size: 40px;
@@ -30,12 +71,17 @@
     line-height: 130%;
     text-decoration-line: underline;
     color: $clr-black;
+    @include big-screen {
+      font-size: 30px;
+    }
+    @include small-screen {
+      font-size: 35px;
+    }
   }
 
   .hours {
     margin-top: 20px;
     font-size: 18px;
-
     font-weight: 500;
   }
   .day {
@@ -45,5 +91,3 @@
     line-height: 130%;
   }
 }
-
-

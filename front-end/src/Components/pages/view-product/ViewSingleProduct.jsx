@@ -1,38 +1,21 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useParams, useNavigate, Navigate } from "react-router-dom";
-import SingleProduct from "../../SingleProduct";
+import { useParams } from "react-router-dom";
+
 import { getSingleProduct } from "../../../store/slices/productsSlice";
 import { addToCart } from "../../../store/slices/cartSlice";
 import "../../../styles/SingleProduct.scss";
-import { useState } from "react";
 
 function ViewSingleProduct() {
-  const [toCart, setToCart] =useState(false);
-  const navigate = useNavigate();
   const dispatch = useDispatch();
   const products = useSelector((state) => state.products.productSingle);
   const status = useSelector((state) => state.products.productSingleStatus);
   const error = useSelector((state) => state.products.productSingleError);
-  // console.log(products);
   const { id } = useParams();
 
   console.log("product", products);
   console.log("status", status);
   console.log("error", error);
-
-  // const product = products.find((product) => product.id === id);
-
-  // if (!product) {
-  //   return <Navigate to="*"/>
-  // }
-  // const discountPercent = Math.floor(
-  //   ((product.price - products.discont_price) / products.price) * 100
-  // );
-  function handleCartAdd() {
-    dispatch(addToCart(products));
-    setToCart(!toCart)
-  }
 
   useEffect(() => {
     dispatch(getSingleProduct(id));
@@ -84,15 +67,15 @@ function ViewSingleProduct() {
                 </>
               ) : (
                 <span className="product__price">{product.price}$</span>
-               
               )}
             </div>
-            
-            <button onClick={() => dispatch(addToCart(product))} className="product__btn" >
-  
+
+            <button
+              onClick={() => dispatch(addToCart(product))}
+              className="product__btn"
+            >
               To cart
-              
-             </button>
+            </button>
             <hr className="line"></hr>
             <h4 className="product__description_t">Description</h4>
             <p className="product__description">{product.description}</p>

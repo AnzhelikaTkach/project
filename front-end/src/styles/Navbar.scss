@@ -9,7 +9,12 @@
   height: 72px;
   padding: 0 28px;
   background-color: $clr-white;
-  
+
+  @include medium-screen {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
 
   &__logo-btn {
     display: flex;
@@ -35,29 +40,18 @@
       gap: 140px;
     }
     @include medium-screen {
-      gap: 50px;
-      margin-left: 300px;
-      margin-right: auto;
+      margin-top: 70px;
+
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: flex-end;
+      gap: 48px;
     }
     @include small-screen {
-      // margin-top: 20px;
-      // // margin-bottom: 50px;
-      // gap: 30px;
-      // margin-left: 150px;
-      margin-top: -55px;
-      gap: 48px;
-      margin-left: 230px;
-      display: flex;
-      flex-direction: column-reverse;
-      align-items: flex-end;
+      margin-left: -150px;
     }
     @include x-small {
-      margin-top: -55px;
-      gap: 48px;
-      margin-left: 30px;
-      display: flex;
-      flex-direction: column-reverse;
-      align-items: flex-end;
+      margin-left: -250px;
     }
   }
 
@@ -66,12 +60,9 @@
     @include medium-screen {
       margin: 0 15px;
     }
-    @include small-screen {
-      margin: 0 9px;
-      
-    }
+
     @include x-small {
-      
+      margin: 0 9px;
     }
   }
 
@@ -96,29 +87,29 @@
   }
 }
 
-.header-nav {
-  margin: 10px auto;
+// .header-nav {
+//   margin: 10px auto;
 
-  @include big-screen {
-    min-width: 797px;
-  }
-  @include medium-screen {
-    // max-width: 800px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  @include small-screen {
-    // max-width: 580px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  @include x-small {
-    width: 100%;
-    padding: 15px;
-  }
-}
+//   @include big-screen {
+//     min-width: 797px;
+//   }
+//   @include medium-screen {
+//     // max-width: 800px;
+//     display: flex;
+//     flex-direction: column;
+//     align-items: flex-start;
+//   }
+//   @include small-screen {
+//     // max-width: 580px;
+//     display: flex;
+//     flex-direction: column;
+//     align-items: flex-start;
+//   }
+//   @include x-small {
+//     width: 100%;
+//     padding: 15px;
+//   }
+// }
 
 // @media (max-width: 799px) and (min-width:770px) {
 //   .header__links {

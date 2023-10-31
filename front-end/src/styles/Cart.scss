@@ -1,0 +1,187 @@
+@import "../App.scss";
+@import "../styles/Discount.scss";
+
+.cart-container {
+  display: grid;
+  grid-template-columns: 1fr 500px;
+  margin-top: 50px;
+  gap: 50px;
+  margin-right: 40px;
+  margin-bottom: 80px;
+  @include x-large {
+    gap: 75px;
+  }
+  @include big-screen {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    margin-top: 20px;
+  }
+  @include medium-screen {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    margin-top: 20px;
+  }
+  &__h3 {
+    margin-bottom: 20px;
+    margin-left: 30px;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 130%;
+    letter-spacing: 1.2px;
+    @include big-screen {
+      position: absolute;
+      top: 150px;
+      left: 20px;
+    }
+    @include medium-screen {
+      position: absolute;
+      top: 150px;
+      left: 20px;
+    }
+    @include small-screen {
+      position: absolute;
+      top: 150px;
+      left: 10px;
+    }
+  }
+  &__link {
+    display: flex;
+    justify-content: end;
+    margin-bottom: 50px;
+    align-items: center;
+    gap: 8px;
+  }
+  &__items {
+    width: 100%;
+    height: auto;
+    @include x-large {
+      width: 100%;
+    }
+    @include big-screen {
+      width: 100%;
+    }
+  }
+  &__left {
+    margin-top: 140px;
+    width: 496px;
+    height: 393px;
+    border-radius: 21px;
+    border: 2px solid #000;
+    @include x-large {
+      width: 420px;
+    }
+    @include big-screen {
+      width: 496px;
+      height: 393px;
+    }
+    @include small-screen {
+      width: 420px;
+      margin-left: 45px;
+    }
+    @include x-small {
+      width: 360px;
+      margin-left: 45px;
+    }
+  }
+  &__h4 {
+    margin-left: 25px;
+    margin-top: 25px;
+    margin-bottom: 47px;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 130%;
+    letter-spacing: 0.84px;
+    @include x-small {
+      margin-top: 20px;
+      margin-bottom: 30px;
+    }
+  }
+  &__p {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-bottom: 70px;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%;
+    letter-spacing: 0.72px;
+    @include x-small {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 50px;
+    }
+  }
+  &__span {
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 130%;
+    letter-spacing: 0.96px;
+    @include x-small {
+      margin-top: 15px;
+    }
+  }
+  .discount__form__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-left: 50px;
+    @include x-large {
+      margin-left: 0;
+    }
+    margin-left: 50px;
+    @include big-screen {
+      margin-left: 50px;
+    }
+    @include small-screen {
+      margin-left: 0;
+    }
+    @include x-small {
+      margin-left: 0;
+    }
+  }
+  .discount__form__input {
+    border: 1px solid black;
+    width: 400px;
+    @include x-large {
+      margin-left: 50px;
+      width: 330px;
+    }
+    @include big-screen {
+      width: 400px;
+    }
+    @include small-screen {
+      margin-left: 50px;
+      width: 330px;
+    }
+    @include x-small {
+      margin-left: 40px;
+      width: 280px;
+    }
+  }
+  .discount__form__dis {
+    border: 1px solid #393;
+    background: #393;
+    @include x-large {
+      margin-left: 50px;
+      width: 330px;
+    }
+    @include big-screen {
+      width: 400px;
+    }
+    @include small-screen {
+      margin-left: 50px;
+      width: 330px;
+    }
+    @include x-small {
+      margin-left: 40px;
+      width: 280px;
+    }
+  }
+}

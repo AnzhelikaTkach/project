@@ -1,5 +1,7 @@
+@import "../App.scss";
+
 .filtration {
-  margin-bottom: 20px;
+  margin-bottom: 50px;
   //   text-align: center;
 }
 
@@ -10,12 +12,14 @@
   height: 42px;
   border-radius: 7px;
   border: 1px solid #000;
-  color: #acacac;
-
+  outline: none;
   font-family: Montserrat;
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
+  @include medium-screen {
+    margin-bottom: 30px;
+  }
 }
 .filtration__title {
   margin-left: 10px;
@@ -37,6 +41,11 @@
   text-align: center;
   display: inline-flex;
   align-items: center;
+  @include small-screen {
+    margin-bottom: 35px;
+    margin-top: 10px;
+    margin-left: 31px;
+  }
 }
 
 .filtration__checkbox {
@@ -56,7 +65,16 @@
   display: inline-flex;
   align-items: center;
   gap: 15px;
+  @include medium-screen {
+    // margin-bottom: 30px;
+    margin-left: 30px;
+  }
+  @include small-screen {
+    // margin-bottom: 30px;
+    margin-left: 32px;
+  }
 }
+
 .filtration-select {
   font-size: 0.9rem;
   padding: 10px 5px;
@@ -64,9 +82,24 @@
   font-family: Montserrat;
   font-size: 16px;
   font-weight: 500;
-  line-height: 130%; 
+  line-height: 130%;
   letter-spacing: 0.48px;
   border-radius: 7px;
   border: 1px solid #000;
-    cursor: pointer;
+  cursor: pointer;
+
+  @include medium-screen {
+    // margin-bottom: 30px;
+    // margin-left: -15px;
+  }
+  // &:after{
+  //   border-style: inherit;
+  //   box-sizing: border-box;
+  //   background-color: inherit;
+  // }
+  // option{
+  //  border-style: inherit;
+  //  box-sizing: border-box;
+  //  background-color: inherit;
+  // }
 }

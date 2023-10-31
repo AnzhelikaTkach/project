@@ -1,6 +1,5 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
-import { useMemo } from "react";
 
 export const getProducts = createAsyncThunk(
   "products/getProducts",
@@ -9,7 +8,6 @@ export const getProducts = createAsyncThunk(
       const response = await axios.get("http://localhost:3333/products/all");
       return response.data;
     } catch (err) {
-      // console.log(err);
       return thunkAPI.rejectWithValue(err);
     }
   }
@@ -32,46 +30,6 @@ const productsSlice = createSlice({
   initialState: {
     products: [],
     productSingle: [],
-    filteredProducts:[
-      {
-        priceFrom: "",
-        priceTo: "",
-        showDiscount: false,
-        sortType: ""
-       }
-    ] 
-     
-    
-  },
-  reducers: {
-    saleProducts: (state, action) => {
-      
-    },
-    filterProducts: (state, action) => {
-      let filtered= state.products;
-      if (state.priceFrom) {
-        filtered = filtered.filter(
-          (product) => product.price >= Number(action.payload.priceFrom)
-        );
-      }
-
-      if (state.priceTo) {
-        filtered = filtered.filter(
-          (product) => product.price <= Number(action.payload.priceTo)
-        );
-      }
-
-      if (state.showDiscount) {
-        filtered = filtered.filter((product) => product.discont_price);
-      }
-
-      if (state.sortType === "asc") {
-        filtered.sort((a, b) => a.price - b.price);
-      } else if (state.sortType === "desc") {
-        filtered.sort((a, b) => b.price - a.price);
-      }
-       state.filteredProducts(filtered)
-    }
   },
   extraReducers: (builder) => {
     builder
@@ -101,8 +59,5 @@ const productsSlice = createSlice({
       });
   },
 });
-
-export const { filterProducts} =
-  productsSlice.actions;
 
 export default productsSlice.reducer;

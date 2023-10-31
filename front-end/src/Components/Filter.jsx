@@ -1,25 +1,16 @@
-import React, { useEffect, useMemo, useState } from "react";
-import { useSelector } from "react-redux";
+import React, { useEffect, useState } from "react";
+
 import SingleProduct from "./SingleProduct";
-import "../styles/FilterProducts.scss"
+import "../styles/FilterProducts.scss";
 import "../styles/ViewAllProducts.scss";
 import FormFilter from "./FormFilter";
 
 function Filter({ products, isDiscountPage, status }) {
-  // const products = useSelector((state) => state.products.products);
-  // const products = useSelector((state) => state.products.status);
-  // const [discountPage,setDiscountPage] = useState(isDiscountPage)
   const [filteredProducts, setFilteredProducts] = useState(products);
-  // console.log("products", products);
   const [priceFrom, setPriceFrom] = useState("");
   const [priceTo, setPriceTo] = useState("");
   const [showDiscount, setShowDiscount] = useState(false);
   const [sortType, setSortType] = useState("");
-  // useEffect(() => {
-  //   if (status === "fulfilled") {
-  //     setFilteredProducts(products);
-  //   }
-  // }, [status]);
 
   useEffect(() => {
     const handleFilter = () => {
@@ -54,26 +45,26 @@ function Filter({ products, isDiscountPage, status }) {
   return (
     <>
       <div>
-      <FormFilter
-        discountPage={isDiscountPage}
-        setPriceFrom={setPriceFrom}
-        setPriceTo={setPriceTo}
-        setFilteredProducts={setFilteredProducts}
-        setShowDiscount={setShowDiscount}
-        setSortType={setSortType}
-        priceFrom={priceFrom}
-        priceTo={priceTo}
-        showDiscount={showDiscount}
-        sortType={sortType}
-      /> 
+        <FormFilter
+          discountPage={isDiscountPage}
+          setPriceFrom={setPriceFrom}
+          setPriceTo={setPriceTo}
+          setFilteredProducts={setFilteredProducts}
+          setShowDiscount={setShowDiscount}
+          setSortType={setSortType}
+          priceFrom={priceFrom}
+          priceTo={priceTo}
+          showDiscount={showDiscount}
+          sortType={sortType}
+        />
 
-      <div className="products__container">
-        {filteredProducts.map((product) => (
-          <div className="product_items" key={product.id}>
-            <SingleProduct  product={product} />
-          </div>
-        ))}
-      </div>
+        <div className="products__container">
+          {filteredProducts.map((product) => (
+            <div className="product_items" key={product.id}>
+              <SingleProduct product={product} />
+            </div>
+          ))}
+        </div>
       </div>
     </>
   );

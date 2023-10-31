@@ -1,20 +1,23 @@
+import React, { useState } from "react";
 import { useEffect } from "react";
 import { useSelector } from "react-redux";
+import Cart from "./pages/cart/Cart";
+import Form from "./Form";
 import { NavLink } from "react-router-dom";
+import EmptyCart from "./EmptyCart";
+import "../styles/Cart.scss";
+import "../styles/Discount.scss";
+// import "../../../styles/ModalWindow.scss";
 
-import Cart from "./Cart";
-import Form from "../../Form";
-import EmptyCart from "../../EmptyCart";
-import "../../../styles/Cart.scss";
-import "../../../styles/Discount.scss";
-
-function CartPage() {
+function CartSection() {
   const cart = useSelector((state) => state.cart.cart);
   console.log("cart", cart);
   const btnTitle = "Order";
   const firstSubtitle = "We received your order!";
   const secondSubtitle =
     "We will ship the listed items as quickly as possible!";
+  // const quantity = useSelector((state)=> state.cart.cart[0].quantity)
+  // console.log("quan",quantity);
 
   const getTotal = () => {
     let totalQuantity = 0;
@@ -25,6 +28,8 @@ function CartPage() {
     });
     return { totalPrice, totalQuantity };
   };
+
+  // const emptyCartMsg = <h4 className="empty">Your cart is empty!</h4> ;
 
   useEffect(() => {
     localStorage.setItem("cart", JSON.stringify(cart));
@@ -74,23 +79,28 @@ function CartPage() {
         <div>
           <p className="cart-container__p">
             Total ({getTotal().totalQuantity} items){" "}
-            <span className="cart-container__span">
-              {getTotal().totalPrice}$
-            </span>
+            <span>${getTotal().totalPrice}</span>
           </p>
         </div>
 
-        <div className="cart-container__form-container">
-          <Form
+
+       
+      
+
+      
+       
+       
+        <Form
             url={"http://localhost:3333/order/send"}
             firstSubtitle={firstSubtitle}
             secondSubtitle={secondSubtitle}
             btnTitle={btnTitle}
           />
-        </div>
+     
+      
       </div>
     </div>
   );
 }
 
-export default CartPage;
+export default CartSection;

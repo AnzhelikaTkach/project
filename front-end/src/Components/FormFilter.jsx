@@ -45,13 +45,16 @@ function FormFilter({
       <label className="filtration__title-sort">
         Sorted
         <div className="select">
-        <select className="filtration-select" value={sortType} onChange={(e) => setSortType(e.target.value)}>
-          <option value="">by default</option>
-          <option value="asc">По Возрастанию</option>
-          <option value="desc">По убыванию</option>
-        </select>
+          <select
+            className="filtration-select"
+            value={sortType}
+            onChange={(e) => setSortType(e.target.value)}
+          >
+            <option value="">by default</option>
+            <option value="asc">По Возрастанию</option>
+            <option value="desc">По убыванию</option>
+          </select>
         </div>
-       
       </label>
     </div>
   );

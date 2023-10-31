@@ -12,11 +12,8 @@ function ModalWindow({ open, onClose, firstSubtitle, secondSubtitle }) {
             X
           </p>
           <div className="content">
-            <h1 className='content__title'> Thank You!</h1>
-            
-            {/* <p className='content__text'>A confirmation letter has been sent to you.</p> */}
+            <h1 className="content__title"> Thank You!</h1>
             <p className="content__text">{firstSubtitle}</p>
-            {/* <p className='content__text'> Check your inbox.</p> */}
             <p className="content__text"> {secondSubtitle}</p>
             <button className="content__btn" onClick={onClose}>
               Continue shopping!

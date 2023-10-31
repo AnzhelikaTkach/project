@@ -1,23 +1,8 @@
-import React, { useState } from "react";
-import "../styles/Navbar.scss";
-// import { Cart } from "../view";
-// import { useState } from "react";
 import { NavLink } from "react-router-dom";
 
+import "../styles/Navbar.scss";
+
 function Navbar() {
-  const [menuClass, setMenuClass] = useState("menu hidden")
-    const [isMenuClicked, setIsMenuClicked] = useState(false);
-
-    const updateMenu = () => {
-      if(!isMenuClicked) {
-
-          setMenuClass("menu visible")
-      }
-      else {
-          setMenuClass("menu hidden")
-      }
-      setIsMenuClicked(!isMenuClicked)
-  }
   return (
     <header className="header header-nav">
       <div className="header__logo-btn">
@@ -65,12 +50,12 @@ function Navbar() {
             <img src="../images/shop-bag.png" alt="shopping bag" />
           </NavLink>
 
-          <img
+          {/* <img
           onClick={()=> setIsMenuClicked}
             className="burger "
             src="../images/menu_hamburger_burger.png"
             alt="menu icon"
-          />
+          /> */}
         </div>
       </div>
     </header>

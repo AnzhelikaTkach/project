@@ -12,56 +12,56 @@
     grid-template-columns: 1fr;
     gap: 30px;
     height: 900px;
-    // align-items: center;
     justify-items: center;
     text-align: center;
   }
-  .discount__form {
-    &__h1 {
-      font-size: 80px;
-      font-style: normal;
-      font-weight: 700;
-      line-height: 120%; /* 108px */
-      letter-spacing: 2.7px;
-    }
-    &__h2 {
-      font-size: 40px;
-      font-weight: 700;
-      line-height: 120%;
-      letter-spacing: 1.5px;
-      @include x-small{
-        font-size: 35px;
-        letter-spacing: 0px;
-      }
-    }
-    &__form {
-      display: flex;
-      flex-direction: column;
-      margin-top: 20px;
-      width: 400px;
-      gap: 20px;
-      @include x-small{
-        margin-top: 50px;
-        width: 300px;
-      }
-    }
-    &__input {
-      height: 60px;
-      border: none;
-      border-radius: 15.147px;
-      padding: 16px 40px;
-      font-size: 18px;
-    }
-    &__dis {
-      height: 60px;
-      background: transparent;
-      color: white;
-      border-radius: 25.147px;
-      border: 2.395px solid #fff;
-      font-size: 25px;
-      font-weight: 700;
-      line-height: 120%; /* 34.487px */
-      letter-spacing: 0.862px;
+}
+.discount__form {
+  &__h1 {
+    font-size: 80px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%; 
+    letter-spacing: 2.7px;
+  }
+  &__h2 {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 120%;
+    letter-spacing: 1.5px;
+    @include x-small {
+      font-size: 35px;
+      letter-spacing: 0px;
     }
   }
+}
+.discount__form__form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  width: 400px;
+  gap: 20px;
+  @include x-small {
+    margin-top: 50px;
+    width: 300px;
+  }
+}
+.discount__form__input {
+  height: 60px;
+  border: none;
+  border-radius: 15.147px;
+  padding: 16px 40px;
+  font-size: 18px;
+  outline: none;
+}
+.discount__form__dis {
+  height: 60px;
+  background: transparent;
+  color: white;
+  border-radius: 25.147px;
+  border: 2.395px solid #fff;
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 120%; 
+  letter-spacing: 0.862px;
 }
