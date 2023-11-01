@@ -4,8 +4,9 @@ import { useParams } from "react-router-dom";
 
 import "../../../styles/AllCat.scss";
 import { getCategoryProducts } from "../../../store/slices/categoriesSlice";
-import NotFoundPage from "../not-found/NotFoundPage";
 import Filter from "../../Filter";
+import Loader from "../../Loader";
+import NotFoundPage from "../not-found/NotFoundPage";
 
 function ViewCategoryProducts() {
   const dispatch = useDispatch();
@@ -28,19 +29,22 @@ function ViewCategoryProducts() {
   }, [categoryKey, dispatch]);
 
   if (categoryProductsStatus === "loading") {
-    return <NotFoundPage />;
+    return <Loader />;
   }
 
   if (categoryProductsStatus === "fulfilled") {
     return (
       <div>
         <h2 className="category__title">{catTitle.title}</h2>
-
-        <Filter
-          products={categoryProducts}
-          isDiscountPage={false}
-          status={categoryProductsStatus}
-        />
+        {!categoryProducts ? (
+          <NotFoundPage />
+        ) : (
+          <Filter
+            products={categoryProducts}
+            isDiscountPage={false}
+            status={categoryProductsStatus}
+          />
+        )}
       </div>
     );
   }

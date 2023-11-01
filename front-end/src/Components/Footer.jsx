@@ -1,4 +1,5 @@
 import Iframe from "react-iframe";
+import { Link } from "react-router-dom";
 
 import "../styles/Footer.scss";
 
@@ -17,7 +18,10 @@ function Footer() {
                 src="../images/icons-instagram.png"
                 alt="instagram icon"
               />
-              <p>Instagram</p>
+              
+              <p>
+              <Link className="social-media" to="https://www.instagram.com/">Instagram</Link>
+              </p>
             </div>
             <div className="">
               <img
@@ -25,7 +29,9 @@ function Footer() {
                 src="../images/icons-whatsapp.png"
                 alt="WhatsApp icon"
               />
-              <p>WhatsApp</p>
+              <p>
+                <Link className="social-media" to="https://web.whatsapp.com/">WhatsApp</Link>
+              </p>
             </div>
           </div>
         </div>

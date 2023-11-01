@@ -60,10 +60,13 @@ function Form({ url, firstSubtitle, secondSubtitle, btnTitle }) {
               },
               maxLength: {
                 value: 11,
-                message: "Maximum phone number length is 11 symbols",
+                message: "Maximum length is 11 symbols",
               },
             })}
           />
+           <div>
+        {errors?.telephone && (errors?.telephone?.message || <p>Error</p>)}
+      </div>
           <button
             isValid={!isValid}
             className="discount__form__dis"
@@ -79,9 +82,7 @@ function Form({ url, firstSubtitle, secondSubtitle, btnTitle }) {
           />
         </div>
       </form>
-      <div>
-        {errors?.telephone && (errors?.telephone?.message || <p>Error</p>)}
-      </div>
+     
     </div>
   );
 }

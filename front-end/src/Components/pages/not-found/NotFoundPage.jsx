@@ -1,13 +1,11 @@
-import React from 'react'
-
-
+import "../../../styles/NotFoundPage.scss"
 
 function NotFoundPage() {
   return (
-    <div>
-      <img src="../../images/NotFound.jpg" alt="" />
+    <div >
+      <img className="image" src="../../images/NotFound.jpg" alt="NotFoundImage" />
     </div>
-  )
+  );
 }
 
 export default NotFoundPage;

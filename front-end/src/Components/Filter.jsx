@@ -4,6 +4,7 @@ import SingleProduct from "./SingleProduct";
 import "../styles/FilterProducts.scss";
 import "../styles/ViewAllProducts.scss";
 import FormFilter from "./FormFilter";
+import Loader from "./Loader";
 
 function Filter({ products, isDiscountPage, status }) {
   const [filteredProducts, setFilteredProducts] = useState(products);
@@ -41,6 +42,10 @@ function Filter({ products, isDiscountPage, status }) {
     };
     handleFilter();
   }, [priceFrom, priceTo, showDiscount, sortType]);
+
+  if (status === "loading") {
+    return <Loader />;
+  }
 
   return (
     <>

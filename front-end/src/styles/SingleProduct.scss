@@ -155,7 +155,6 @@
   }
 
   .product__btn:active {
-    // content: "bh";
     color: $clr-white;
     background: linear-gradient(263deg, #393 -0.43%, #006300 104.36%);
   }
@@ -170,6 +169,7 @@
     );
     background-size: 20px 1px;
     border: none;
+    margin-left: 0;
     margin-right: 40px;
     margin-bottom: 25px;
     @include medium-screen {

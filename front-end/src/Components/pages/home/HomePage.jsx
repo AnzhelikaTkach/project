@@ -6,6 +6,7 @@ import Discount from "../../Discount";
 import "../../../styles/AllCat.scss";
 import HeroSection from "../../HeroSection";
 import SingleProduct from "../../SingleProduct";
+import Loader from "../../Loader";
 
 function HomePage() {
   const navigate = useNavigate();
@@ -20,12 +21,7 @@ function HomePage() {
     .slice(0, 3);
 
   if (status === "loading") {
-    return (
-      <img
-        src="https://i.pinimg.com/originals/d9/f2/15/d9f21515b1e38d83e94fdbce88f623b6.gif"
-        alt="loading"
-      />
-    );
+    return <Loader />;
   }
 
   if (status === "rejected") {

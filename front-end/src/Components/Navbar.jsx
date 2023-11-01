@@ -4,7 +4,7 @@ import "../styles/Navbar.scss";
 
 function Navbar() {
   return (
-    <header className="header header-nav">
+    <header className="header ">
       <div className="header__logo-btn">
         <NavLink to="/">
           <img className="logo" src="../images/icon.png" alt="iconImage" />
@@ -45,17 +45,11 @@ function Navbar() {
           </nav>
         </div>
 
-        <div className="menu">
+        <div className="">
           <NavLink to="/cart">
             <img src="../images/shop-bag.png" alt="shopping bag" />
           </NavLink>
 
-          {/* <img
-          onClick={()=> setIsMenuClicked}
-            className="burger "
-            src="../images/menu_hamburger_burger.png"
-            alt="menu icon"
-          /> */}
         </div>
       </div>
     </header>

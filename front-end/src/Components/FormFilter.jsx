@@ -51,8 +51,8 @@ function FormFilter({
             onChange={(e) => setSortType(e.target.value)}
           >
             <option value="">by default</option>
-            <option value="asc">По Возрастанию</option>
-            <option value="desc">По убыванию</option>
+            <option value="asc">Price: Ascending</option>
+            <option value="desc">Price: Descending</option>
           </select>
         </div>
       </label>

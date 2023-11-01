@@ -15,61 +15,6 @@
     justify-content: space-between;
     margin-bottom: 30px;
   }
-
-  &__logo-btn {
-    display: flex;
-    align-items: center;
-  }
-  &-btn {
-    margin-top: 2px;
-    color: $clr-white;
-    background-color: $clr-primary;
-    margin-left: 50px;
-    padding: 15px 30px;
-    border-radius: 5px;
-    border: 1px solid $clr-primary;
-    font-size: 16px;
-    font-weight: 700;
-  }
-
-  &__links-basket {
-    display: flex;
-    gap: 173px;
-    align-items: center;
-    @include big-screen {
-      gap: 140px;
-    }
-    @include medium-screen {
-      margin-top: 70px;
-
-      display: flex;
-      flex-direction: column-reverse;
-      align-items: flex-end;
-      gap: 48px;
-    }
-    @include small-screen {
-      margin-left: -150px;
-    }
-    @include x-small {
-      margin-left: -250px;
-    }
-  }
-
-  .links {
-    margin: 0 30px;
-    @include medium-screen {
-      margin: 0 15px;
-    }
-
-    @include x-small {
-      margin: 0 9px;
-    }
-  }
-
-  .burger {
-    display: none;
-    align-items: center;
-  }
 }
 .active {
   color: $clr-secondary;
@@ -86,63 +31,52 @@
     color: $clr-primary;
   }
 }
+.header-btn {
+  margin-top: 2px;
+  color: $clr-white;
+  background-color: $clr-primary;
+  margin-left: 50px;
+  padding: 15px 30px;
+  border-radius: 5px;
+  border: 1px solid $clr-primary;
+  font-size: 16px;
+  font-weight: 700;
+}
 
-// .header-nav {
-//   margin: 10px auto;
+.links {
+  margin: 0 30px;
+  @include medium-screen {
+    margin: 0 15px;
+  }
 
-//   @include big-screen {
-//     min-width: 797px;
-//   }
-//   @include medium-screen {
-//     // max-width: 800px;
-//     display: flex;
-//     flex-direction: column;
-//     align-items: flex-start;
-//   }
-//   @include small-screen {
-//     // max-width: 580px;
-//     display: flex;
-//     flex-direction: column;
-//     align-items: flex-start;
-//   }
-//   @include x-small {
-//     width: 100%;
-//     padding: 15px;
-//   }
-// }
+  @include x-small {
+    margin: 0 9px;
+  }
+}
+.header__logo-btn {
+  display: flex;
+  align-items: center;
+}
 
-// @media (max-width: 799px) and (min-width:770px) {
-//   .header__links {
-//     display: flex;
-//     flex-direction: column;
-//     align-items: flex-start;
-//     justify-content: flex-start;
-//     position: fixed;
-//     top: 0;
-//     right: -300px;
-//     height: 100vh;
-//     width: 300px;
-//     background-color: $clr-white;
-//     // box-shadow: 0 40px 60px rgba(0, 0, 0.1, 0);
-//     padding: 70px 0 0 10px;
-//   }
-//   #header__links .links {
-//     margin-bottom: 25px;
-//     color: $clr-black;
-//     &:hover,
-//     :focus {
-//       color:  rgb(18, 54, 18);
-//     }
-//   }
-//   .menu {
-//     display: flex;
-//     align-items: center;
-//     gap: 20px;
-//     padding-right: 0;
-//   }
-//   .burger {
-//     display: flex !important;
-//     align-items: center;
-//     width: 40px;
-//   }
-// }
+.header__links-basket {
+  display: flex;
+  gap: 173px;
+  align-items: center;
+  @include big-screen {
+    gap: 140px;
+  }
+  @include medium-screen {
+    margin-top: 70px;
+
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-end;
+    gap: 48px;
+  }
+  @include small-screen {
+    margin-left: -150px;
+  }
+  @include x-small {
+    margin-left: -250px;
+  }
+}

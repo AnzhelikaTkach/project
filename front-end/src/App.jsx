@@ -20,7 +20,6 @@ import Footer from "./Components/Footer";
 import { getAllCategories } from "./store/slices/categoriesSlice";
 import { getProducts } from "./store/slices/productsSlice";
 import ProductsWithSalePage from "./Components/pages/view-product/ProductsWithSalePage";
-import CartSection from "./Components/CartSection";
 
 function App() {
   const dispatch = useDispatch();
